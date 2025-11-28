@@ -1,18 +1,16 @@
 // Default user lists for each platform
 const defaultAtCoderUsers = [
-    "surya_sujith09", "Chandrika0205", "jalaluddin420", "harshith2507",
-    "Tanushreddyy", "Karthik0206", "koushikweb", "suhas3157", 
-    "joelchopra", "sonu24", "hemanthraojamena", "manichandana", 
-    "lrv", "s_dinesh_reddy", "shiva_karthik121", "advaithchaitanya", 
-    "manchalaganesh", "ponugotikruthik", "KiranKumarChenna","Santosh69"
+    "jalaluddin420",
+    "sonu24", "manichandana", 
+    "lrv", "shiva_karthik121", "advaithchaitanya", 
+    "manchalaganesh", 
 ];
 
 const defaultCodeforcesUsers = [
-    "surya_sujith09", "Chandrika0205", "jalaluddin420", "harshith2507",
-    "Tanushreddyy", "Karthik0206", "koushikweb", "suhas3157", 
-    "joelchopra", "sonu24", "hemanthraojamena", "manichandanaa", 
-    "lrvkausthubh", "sdr", "shiva_karthik121", "advaithchaitanya", 
-    "manchalaganesh", "ponugotikruthik", "KiranKumarChenna", "santoshpalaka69"
+    "jalaluddin420",
+    "sonu24", "manichandanaa", 
+    "lrvkausthubh", "shiva_karthik121", "advaithchaitanya", 
+    "manchalaganesh", 
 ];
 
 // User mapping to connect AtCoder and CodeForces IDs
@@ -1534,4 +1532,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('fetch-contest-button');
     if (btn) btn.addEventListener('click', redirectToContestsPage);
 });
+
 
