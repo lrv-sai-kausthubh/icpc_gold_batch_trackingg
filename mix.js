@@ -8,7 +8,7 @@ const defaultAtCoderUsers = [
 
 const defaultCodeforcesUsers = [
     "jalaluddin420",
-    "sonu24", "manichandanaa", 
+    "_soma_shekar_", "manichandanaa", 
     "lrvkausthubh", "shiva_karthik121", "advaithchaitanya", 
     "manchalaganesh", 
 ];
@@ -1532,5 +1532,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('fetch-contest-button');
     if (btn) btn.addEventListener('click', redirectToContestsPage);
 });
+
 
 
