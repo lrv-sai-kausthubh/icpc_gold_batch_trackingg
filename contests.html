@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contest Statistics</title>
+    <link rel="stylesheet" href="contest.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-chart-bar"></i> Contest Statistics</h1>
+            <div class="controls">
+                <a href="mix.html" class="btn secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Tracking
+                </a>
+                <a href="heat.html" class="btn secondary">
+                    <i class="fas fa-fire"></i> Back to Heat Map
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="info-panel">
+            <div class="info-panel-content">
+                <h2>Contest Participation Overview</h2>
+                <p>Track contest participation across AtCoder and Codeforces platforms</p>
+            </div>
+            
+            <!-- Search Bar Section -->
+            <div id="search-section" class="search-section hidden">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input 
+                        type="text" 
+                        id="user-search" 
+                        class="search-input" 
+                        placeholder="Search users..."
+                        autocomplete="off"
+                    />
+                    <button id="clear-search" class="clear-search-btn hidden">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="search-stats">
+                    <span id="search-results-count">Showing all users</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="loading" class="loading-container">
+            <div class="spinner"></div>
+            <p id="loading-text">Loading contest data...</p>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <p id="progress-text" class="progress-text">0 / 0 (0%)</p>
+            </div>
+        </div>
+
+        <div id="error" class="error-container hidden">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p id="error-message"></p>
+            <button id="retry-btn" class="btn primary">Retry</button>
+        </div>
+
+        <div id="stats-summary" class="stats-summary hidden">
+            <div class="stat-card">
+                <h3>Total Users</h3>
+                <p id="total-users" class="stat-number">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total AtCoder Contests</h3>
+                <p id="total-atcoder" class="stat-number">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Codeforces Contests</h3>
+                <p id="total-codeforces" class="stat-number">0</p>
+            </div>
+        </div>
+
+        
+
+        <div id="contest-table-container" class="table-container hidden">
+            <table id="contest-table" class="contest-table">
+                <thead>
+                    <tr>
+                        <th>User Name</th>
+                        <th>AtCoder Contests</th>
+                        <th>Codeforces Contests</th>
+                        <th>Total Contests</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody id="contest-table-body">
+                    <!-- Table rows will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ICPC Training Tracker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="contest.js"></script>
+</body>
+</html>

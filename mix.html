@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Combined Platform Tracker</title>
+    
+    <link rel="stylesheet" href="mix.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="none,noarchive"/>
+</head>
+
+<body>
+    <div class="header-container">
+        <div>
+            <h1>Track Your Atcoder & CodeForces Progress</h1>
+            <p>Made by Lrv & Jalaluddin © 2025</p>
+        </div>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <span id="theme-label">Light Mode</span>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <a href="index.html" class="nav-button">◀ Back to Platforms</a>
+    </div>
+
+    <div class="tab-container">
+        <button class="tab-button active" onclick="showTab('profiles-tab')">User Profiles</button>
+        <button class="tab-button" onclick="showTab('manual-tab')">Manual Entry</button>
+        <button class="tab-button" onclick="window.location.href='heat.html'">View Users Heat Map</button>
+        <button class="tab-button" onclick="window.location.href='contests.html'">View Users Contest Stats</button>
+        
+    </div>
+    
+
+    <div id="profiles-tab" class="tab-content">
+        <div class="profiles-header">
+            <h2>Select users to track:</h2>
+        </div>
+        
+        <div class="dropdown-container">
+            <div class="dropdown-search">
+                <div class="search-input-group">
+                    <input type="text" id="user-search" placeholder="Search users...">
+                    <button id="toggle-all-users" class="toggle-all-button">Select All</button>
+                </div>
+                <div id="dropdown-menu" class="dropdown-menu">
+                    <!-- User options will be populated here -->
+                </div>
+            </div>
+            
+            <div id="selected-users-container" class="selected-users-container">
+    <div class="selected-users-header" id="selected-users-header">
+        <h3>Selected Users (<span id="selected-users-count">0</span>)</h3>
+        <span class="dropdown-arrow">▼</span>
+    </div>
+    <div id="selected-users" class="selected-users-list collapsed">
+        <!-- Selected users will appear here -->
+    </div>
+</div>
+        </div>
+    </div>
+
+    <div id="manual-tab" class="tab-content" style="display:none;">
+        <div class="platform-hint">
+            <p>You can enter usernames for atcoder & codeforces and check your progress</p>
+        </div>
+        
+        <div class="platform-entries-container">
+            <div class="platform-entry">
+                <h3><span class="platform-tag atcoder-tag">AC</span> AtCoder Usernames</h3>
+                <textarea id="atcoder-usernames" placeholder="Enter AtCoder usernames here..."></textarea>
+            </div>
+            
+            <div class="platform-entry">
+                <h3><span class="platform-tag codeforces-tag">CF</span> CodeForces Usernames</h3>
+                <textarea id="codeforces-usernames" placeholder="Enter CodeForces usernames here..."></textarea>
+            </div>
+        </div>
+        
+        <div class="platform-options" style="display:none;">
+            <p>Select which platforms to fetch:</p>
+            <label class="platform-checkbox">
+                <input type="checkbox" id="platform-atcoder" checked> AtCoder
+            </label>
+            <label class="platform-checkbox">
+                <input type="checkbox" id="platform-codeforces" checked> CodeForces
+            </label>
+        </div>
+    </div>
+
+    
+    
+    <button id="fetch-button" onclick="fetchStats()">Fetch Stats</button>
+    <!-- <button id="fetch-contest-button">Fetch Contest Stats</button> -->
+
+    <p id="timestamp"></p>
+    
+    <!-- Platform selection for filter -->
+    <div id="platform-filter" class="platform-filter" style="display:none;">
+        <h3>Select Platforms:</h3>
+        <div class="platform-options">
+            <label class="platform-checkbox">
+                <input type="checkbox" id="show-atcoder" checked> AtCoder
+            </label>
+            <label class="platform-checkbox">
+                <input type="checkbox" id="show-codeforces" checked> CodeForces
+            </label>
+        </div>
+    </div>
+    
+    <div id="table-container"></div>
+
+    <script src="mix.js"></script>
+</body>
+
+</html>
