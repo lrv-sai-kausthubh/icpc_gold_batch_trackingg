@@ -13,7 +13,7 @@ const defaultAtCoderUsers = [
 
 const defaultCodeforcesUsers = [
     "jalaluddin420", 
-    "sonu24", "manichandanaa", 
+    "_soma_shekar_", "manichandanaa", 
     "lrvkausthubh", "shiva_karthik121", "advaithchaitanya", 
     "manchalaganesh", 
 ];
@@ -902,3 +902,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
