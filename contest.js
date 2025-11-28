@@ -5,45 +5,35 @@ let allUserData = []; // Store all user data for filtering
 
 
 const defaultAtCoderUsers = [
-    "surya_sujith09", "Chandrika0205", "jalaluddin420", "harshith2507",
-    "Tanushreddyy", "Karthik0206", "koushikweb", "suhas3157", 
-    "joelchopra", "sonu24", "hemanthraojamena", "manichandana", 
-    "lrv", "s_dinesh_reddy", "shiva_karthik121", "advaithchaitanya", 
-    "manchalaganesh", "ponugotikruthik", "KiranKumarChenna", "Santosh69"
+    "jalaluddin420",
+    "sonu24", "manichandana", 
+    "lrv", "shiva_karthik121", "advaithchaitanya", 
+    "manchalaganesh", 
 ];
 
 const defaultCodeforcesUsers = [
-    "surya_sujith09", "Chandrika0205", "jalaluddin420", "harshith2507",
-    "Tanushreddyy", "Karthik0206", "koushikweb", "suhas3157", 
-    "joelchopra", "sonu24", "hemanthraojamena", "manichandanaa", 
-    "lrvkausthubh", "sdr", "shiva_karthik121", "advaithchaitanya", 
-    "manchalaganesh", "ponugotikruthik", "KiranKumarChenna", "santoshpalaka69"
+    "jalaluddin420", 
+    "sonu24", "manichandanaa", 
+    "lrvkausthubh", "shiva_karthik121", "advaithchaitanya", 
+    "manchalaganesh", 
 ];
 
 
 
 // User name mapping - add this after the userMapping
 const userNames = {
-    "surya_sujith09": "Surya Sujith",
-    "Chandrika0205": "Chandrika",
+
     "jalaluddin420": "Jalaluddin",
-    "harshith2507": "Harshith",
-    "Tanushreddyy": "Tanush Reddy",
-    "Karthik0206": "Karthik",
-    "koushikweb": "Koushik",
-    "suhas3157": "Suhas",
-    "joelchopra": "Joel Chopra",
+    
     "sonu24": "Sonu",
-    "hemanthraojamena": "Hemanth Rao",
+    
     "manichandana": "Mani Chandana",
     "lrv": "LRV Kausthubh",
-    "s_dinesh_reddy": "Dinesh Reddy",
+   
     "shiva_karthik121": "Shiva Karthik",
     "advaithchaitanya": "Advaith Chaitanya",
     "manchalaganesh": "Ganesh",
-    "ponugotikruthik": "Kruthik",
-    "KiranKumarChenna": "Kiran Kumar",
-    "Santosh69": "Santosh"
+    
 };
 
 
@@ -910,4 +900,5 @@ document.addEventListener('DOMContentLoaded', () => {
     if (retryBtn) {
         retryBtn.addEventListener('click', loadAndRenderContests);
     }
+
 });
